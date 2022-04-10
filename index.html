@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <title>MONTHLY TRACKER</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__heading">Monthly</h1>
+        <p>Możesz wydać jeszcze <span class="money">987</span>złotych</p>
+    </header>
+    <main class="budget">
+        <section>
+            <form>
+                <label for="incomes">Opis</label>
+                <input type="text" id="incomes" name="incomes" placeholder="Nazwa przychodu" class="descrition">
+                <label for="value">Kwota</label>
+                <input type="number" id="value" name="value" placeholder="Wartość" class="value">
+                <button class="button">Dodaj</button>
+            </form>
+        </section>
+        <section class="budget__balance">
+            <h2 class="budget__heading">Przychody</h2>
+            <ul class="list">
+                <li>
+                    <p>Wypłata <span>2450zł</span></p>
+                    <button class="list__button">Edytuj</button>
+                    <button class="list__button">Usuń</button>
+                </li>
+            </ul>
+        </section>
+        <section class="budget__balance">
+            <h2 class="balance__heading">Wydatki</h2>
+            <ul class="list">
+                <li>
+                    <p>Podatki<span>1830zł</span></p>
+                    <button class="list__button">Edytuj</button>
+                    <button class="list__button">Usuń</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
