@@ -2,7 +2,7 @@
     --income-color: rgb(21, 152, 21);
     --expense-color: #e63946;
     --form--backgroundc-color: #1d3557;
-    --balance--backgroundc-color: rgb(83, 165, 227);
+    --balance--backgroundc-color: rgb(192, 144, 47);
     --text-color: #f1faee;
 }
 
@@ -18,104 +18,79 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
-    color: var(--text-color)
+    color: var(--text-color);
+    background-color: var(--balance--backgroundc-color);
+    text-align: center;
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     text-align: center;
     padding: 2rem;
 }
 
-.budget {
+.section {
     display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    min-height: 70vh;
+    margin: min(5vh, 3rem) 0;
+}
 
-}
-.budget__section{
-    min-height: 100vh;
-    background-color: var(--form--backgroundc-color);
-}
-.budget__form {
-    min-height: 30vh;
+.incomeForm {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
-    padding: 0 5rem;
-   
-}
+  flex-direction: column;
+} 
 
-.form__input {
-    padding: 1rem 2rem;
-    margin: 1rem;
-    background-color: var(--text-color);
+h2 {
+    margin: min(5vh, 3rem) 0;
+}
+button{
+    padding: .6rem;
+    background-color: rgb(74, 46, 255);
     border: none;
-    font-size: 1.5rem;
-    display: block;
-}
-
-.form__button {
-    border: none;flex-direction: column;
-    height: 4rem; 
-    padding: 0 2rem;
-    margin-top: 1.6rem;
-    background-color: var(--balance--backgroundc-color);
+    border-radius: 50%;
     color: var(--text-color);
-    line-height: 1;
-
+    margin-left: 1rem;
+}
+input{
+    padding: .8rem;
+    border-radius: .3rem;
+    border: none;
+    width: 20rem;
 }
 
-.budget__wrapper {
-    display: flex;
-    background-color: var(--balance--backgroundc-color);
-    flex-direction: column;
-    flex: 1 1 0;
-    justify-content: center;
-    align-items: center;
+.remove{
+    background-color: #e63946;
+    border-radius: 0;
 }
-.budget__balance{
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1 1 0;
-    min-height: 50vh;
-    align-items: center;
-    width: 50rem;
-
+.edit{
+    background-color: #F2EFEB;
+    color: #260801;
+    border: none;
+    border-radius: 0;
 }
-.box{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    
+/* .incomeResult{
+ position: sticky;
+ top:20vh;
+ left: -30rem;
+ font-size: 2rem;
+} */
+.expenseResult{
+color: #F2EFEB;
 }
-.box img{
-    width: 6rem;
-    height: 6rem;
-    text-align: center;
+.results{
+width: 10rem;
+height: 2rem;
+background-color: #260801;
+color:#F2EFEB ;
+position:relative;
+top: 40rem;
+left: -50rem;
+}
+.remove,
+.edit{
     padding: 1rem;
-}
-
-.title{
-    padding: 1.5rem;
-}
-.info{
-    padding: 1rem;
-}
-.expense__list{
-    display: flex;
-    min-height: 30vh;
-    flex-direction: column;
-    padding: 3rem;
-
-}
-.expense__info{
-    padding: 1rem;
-    width: 40rem;
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.6rem;
-    
 }
