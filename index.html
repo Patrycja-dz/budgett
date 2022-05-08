@@ -7,87 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>MONTHLY TRACKER</title>
 </head>
 
 <body>
     <header class="header">
-        <h1 class="header__heading">Monthly</h1>
-        <p>Możesz wydać jeszcze <span class="money">987</span>złotych</p>
+        <h1>Monthly</h1>
+        <div id='balance'></div>
     </header>
-    <main class="budget">
-        <section class="budget__section">
-            <form class="budget__form budget-form">
-                <label for="incomes" class="form__label">Wpisz swój budżet
-                    <input type="text" id="incomes" name="incomes" placeholder="Wpisz przychód"
-                        class="budget-input form__input budget-input">
-                </label>
-                <button class="form__button">Dodaj</button>
+    <section class="section">
+        <div class="incomeForm">
+            <form id="income-form">
+                <h2>przychody</h2>
+                <input id='income-name' type='text' placeholder="Nazwa przychodu" />
+                <input id='income-amount' type="number" placeholder="Wartość" />
+                <button id='addIncomeBtn'>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
             </form>
-            <p class="budget-feedback"></p>
-            <form class="budget__form expense-form">
-                <label for="expenses" class="form__label">Wydatek
-                    <input type="text" id="expenses" name="expenses" placeholder="Nazwa wydatku"
-                        class="descrition form__input expense-input">
-
-                </label>
-                <label for="value" class="">Wydana kwota
-                    <input type="number" id="value" name="value" placeholder="Wartość"
-                        class="value form__input expense-value">
-                </label>
-                <button class="form__button">Dodaj</button>
+            <div id="income-container"></div>
+        </div>
+        <div class="results">
+            <p class="incomeResult" id="income-result">0</p>
+        </div>
+        <div class="expenseForm">
+            <form id="expense-form">
+                <h2>wydatki</h2>
+                <input id='expense-name' type='text' placeholder="Nazwa wydatku" />
+                <input id='expense-amount' type="number" placeholder="Wartość" />
+                <button id='addExpenseBtn'>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
             </form>
-            <p class="expense-feedback"></p>
-            <form class="budget__form income-form">
-                <label for="incomes" class="form__label">Przychód
-                    <input type="text" id="incomes" name="incomes" placeholder="Nazwa przychodu"
-                        class="descrition form__input income-input">
+            <div id="expense-container">
 
-                </label>
-                <label for="value" class="">Zyskana kwota
-                    <input type="number" id="value" name="value" placeholder="Wartość"
-                        class="value form__input income-value">
-                </label>
-                <button class="form__button">Dodaj</button>
-            </form>
-            <p class="expense-feedback"></p>
-        </section>
+            </div>
+        </div>
+        <div class="results">
 
-        <div class="budget__wrapper">
-            <section class="budget__balance">
-                <div class="box1 box">
-                    <h3 class="box1__title title">Budżet</h5>
-                        <img src="/assets/coins-solid.svg">
-                        <h4 class="box1__info info" id="budget"><span id="budget-amount">0</span><span> złotych</span>
-                        </h4>
-                </div>
-                <div class="box2 box">
-                    <h3 class="box2__title title">Wydatki</h5>
-                        <img src="/assets/money-bill-transfer-solid.svg">
-                        <h4 class="box2__info info" id="expense"><span id="expense-amount">0</span><span> złotych</span>
-                        </h4>
-                </div>
-                <div class="box3 box">
-                    <h3 class="box3__title title">Przychód</h5>
-                        <img src="/assets/circle-dollar-to-slot-solid.svg">
-                        <h4 class="box3__info info" id="income"><span id="income-amount">0</span><span>złotych</span>
-                        </h4>
-                </div>
-                <div class="box4 box">
-                    <h3 class="box4__title title">Wydatki</h5>
-                        <img src="/assets/scale-balanced-solid.svg">
-                        <h4 class="box4__info info" id="balance"><span id="balance-amount">0</span><span>złotych</span></h4>
-                </div>
-            </section>
-            <div class="expense__list" id="expense-list">
+            <p class="expenseResult" id="expense-result">0</p>
+        </div>
+    </section>
 
-                <div class="expense__info">
-                    <h5 class="list-item">expense title</h5>
-                    <h5 class="list-item">expense value</h5>
-                    <h5 class="list-item"></h5>
-                </div>
-            </div>  
-    </main>
     <script src="app.js"></script>
 </body>
 
